@@ -1,0 +1,574 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  /*cacheall*/
+
+#cacheall{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  z-index: 999999;
+  opacity: 20%;
+  top: 7%;
+  left:0%;
+}
+
+/*end cache all*/
+
+
+
+.username{
+float: right;
+  }
+  .navbar-logo a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .navbar-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  .navbar-menu li {
+    margin: 10px;
+  }
+
+  .navbar-menu li a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .navbar-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+  }
+
+  .navbar-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+  }
+
+  .container {
+    display: flex;
+  }
+
+  .sidebar {
+   /* background-image: url("CSS-Pineapple-Fruit-Background.jpg"); */
+   background-color: #e69705;
+    width: 250px;
+    /* background-color: #f1f1f1; */
+    padding-top: 10px !important;
+    height: 800px;
+    padding: 0 !important;
+
+  }
+
+  .sidebar ul {
+
+    list-style-type: none;
+    margin: 10px;
+    padding: 0;
+  }
+  .sidebar ul li:hover{
+    background-color: #c5c6c7;
+    color: white;
+    opacity: 0.8;
+  }
+  .sidebar ul li {
+    
+    margin-top: 0.5px;
+    background-color: #fafbfd;
+    padding: 10px;
+    list-style: none;
+    color: rgb(0, 0, 0);
+  }
+
+  .sidebar ul li a {
+    color: #020101;
+    text-decoration: none;
+  }
+/***jhjjjhjhj*/
+ 
+/**iuiuiuiiiiiiiiiiiiiiiiiiiiiiiii*/
+
+  .content {
+    flex: 1;
+    padding: 20px;
+    position: relative;
+    background-image: url("./Fotolia_110453628_S.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .navbar-menu {
+      display: none;
+    }
+
+    .navbar-toggle {
+      display: flex;
+    }
+    .container {
+      flex-direction: column;
+    }
+
+  }
+
+  .block {
+    display: none;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    background-color: #f5f5f5;
+    height: 613px;
+  }
+
+  .navigation-button {
+    margin-right: 20px;
+    padding: 10px 15px;
+    background-color: #337ab7;
+    color: rgb(255, 255, 255);
+   
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+  }
+  #previousButton{
+    position: fixed;
+    bottom: 2px;
+  }
+  #nextButton{
+    position: fixed;
+    bottom: 2px;
+    right: 10px;
+  }
+
+  .navigation-button:hover {
+    background-color: #23527c;
+  }
+
+  .navigation-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+
+  /* first block */
+
+  #block1 .dragelement img{
+     width: 86%;
+
+     /* height: 595px; */
+    
+  }
+  #block2.dragelement img{
+    /* width: 88%; */
+    }
+  #block3 .dragelement img{
+ 
+  height: 595px;
+  } 
+
+/***/
+
+.dragItem {
+    margin: 1px ;
+    font-size: 13px;
+    font-weight: bold;
+    background-color: #e69705;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+    min-width: 150px;
+    max-height: 70px;
+    cursor: move;
+    transition: all 0.3s;
+  }
+  /***/
+  .dropTarget {
+    width: 200px;
+    border: 1px dashed #000000;
+    text-align: center;
+  }
+
+  
+  #dropTarget1{
+    position: absolute;
+    left: 4.3%;
+    top: 2.9%;
+    height: 20px;
+    width: 70.5%;
+  }
+  #dropTarget2{
+    position: absolute;
+    left: 39%;
+    top: 15%;
+    height: 32px;
+    width: 12.5%;
+  }
+  #dropTarget3{
+    position: absolute;
+    left: 7.7%;
+    top: 24%;
+    height: 30px;
+    width: 6.5%;
+  }
+  #dropTarget4{
+    position: absolute;
+    left: 15.9%;
+    top: 33.5%;
+    height: 52px;
+    width: 9%;
+  }
+  #dropTarget5{
+    position: absolute;
+    left: 9.5%;
+    top: 43%;
+    height: 37px;
+    width: 3.9%;
+  }
+  #dropTarget6{
+    position: absolute;
+    left: 5.7%;
+    top: 72%;
+    height: 33px;
+    width: 12.5%;
+  }
+  #dropTarget7{
+    position: absolute;
+    left:5%;
+    top: 92%;
+    height: 20px;
+    width: 72%;
+  }
+  #dropTarget8{
+    position: absolute;
+    left: 32%;
+    top: 34.7%;
+    height: 30px;
+    width: 9.1%;
+  }
+  #dropTarget9{
+    position: absolute;
+    left: 32%;
+    top: 49.1%;
+    height: 40px;
+    width: 18.4%;
+  }
+  #dropTarget10{
+    position: absolute;
+    left: 31%;
+    top: 62.3%;
+    height: 50px;
+    width: 10.9%;
+  }
+  #dropTarget11{
+    position: absolute;
+    left: 45.9%;
+    top: 62.8%;
+    height: 51px;
+    width: 9.5%;
+  }
+  #dropTarget12{
+    position: absolute;
+    left: 68.1%;
+    top: 30.8%;
+    height:105px;
+    width: 13.1%;
+  }
+  #dropTarget13{
+    position: absolute;
+    left: 68.1%;
+    top: 52.8%;
+    height:105px;
+    width: 13.1%;
+  }
+  /*BLOCK 02*/
+  #dropTarget21{
+    position: absolute;
+    left: 69px;
+    top: 39.8%;
+    height: 70px;
+    width: 8.1%;
+    color: black;
+    text-align: center;
+    padding-top: 20px;
+    border: none;
+  }
+  .dragelement #dragItem21{
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: -30px;
+    left: -56px;
+  }
+
+  #dropTarget22{
+    position: absolute;
+    left: 210px;
+    top: 40.8%;
+    height: 61px;
+    width: 8.1%;
+    padding-top: 20px;
+    border: none;
+  }
+  .dragelement #dragItem22{
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: -30px;
+    left: -43px;
+  }
+
+  #dropTarget23{
+    position: absolute;
+    left: 360px;
+    top: 40.8%;
+    height: 61px;
+    width: 75px;
+    border: none;
+  }
+  .dragelement #dragItem23{
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: -25px;
+    left: -40px;
+  }
+  #dropTarget24{
+    position: absolute;
+    left: 510px;
+    text-align: center;
+    top: 31%;
+    height: 115px;
+    width: 99px; 
+    border: none;
+  }
+  .dragelement #dragItem24{
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: -20px;
+    left: -40px;
+  }
+  #dropTarget25{
+    position: absolute;
+    left: 30px;
+    top: 29.8%;
+    height: 47px;
+    width: 100px;
+    text-align: center;
+     /* border: none; */
+  }
+  .dragelement #dragItem25{
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: -30px;
+    left: -56px;
+  }
+  /***block 03 */
+
+  #dropTarget14{
+    position: absolute;
+    top: 36.5%;
+    /* left: 15.5%; */
+    left: 122px;
+    width: 150px;
+    height: 110px;
+    padding: 0px;
+    border: none;
+  }
+  #dropTarget14 img{
+    /* transform: rotate3d(0,1,0.6,3.142rad);
+    width: 102px;
+    height:184px !important; */
+
+    transform: rotate3d(0,1,0.6,3.142rad);
+    width: 69% !important;
+    height:184px !important;
+   
+   
+  }
+  #dropTarget15{
+    position: absolute;
+    top: 45.0%;
+    left: 58px;
+    width:130px;
+    height: 102px;
+    border: none;
+    padding: 0px;
+  }
+ 
+  #dropTarget15 img{
+    /* transform: rotate3d(1,1, 0.5, 6.5deg);
+    width: 130px;
+    height: 144px !important; */
+    transform: rotate3d(1,1, 0.5, 6.5deg);
+    width:75.2% !important;
+    height: 144px !important;
+
+  }
+  #dropTarget16{
+    position: absolute;
+    top: 61%;
+    left:  55px;
+    /* left: 5.9%; */
+    width: 120px;
+    height: 80px;
+    padding: 0px;
+    border: none;
+   
+  }
+  #dropTarget16 img{
+    /* transform: rotate3d(1,1, 0.5, 6.5deg);
+    width: 110px;
+    height: 124px !important;
+     */
+     transform: rotate3d(1,1, 0.5, 6.5deg);
+     width:60% !important;
+     height: 124px !important;
+     
+  
+  
+  }
+  .zonededrop1 {
+    position: relative;
+  }
+
+  #dropTarget17{
+    position: absolute;
+    top: 2%;
+    left: 80px;
+    width: 22%;
+    height: 40px;
+    padding: 0px;
+   border: none;
+    
+  }
+
+  #dropTarget17 img{
+    
+    width: 40px;
+    height: 40px !important;
+    
+  }
+
+  #dropTarget18{
+    position: absolute;
+    top: 11%;
+    left: 49px;
+    width: 9.5%;
+    height: 80px;
+    padding: 0px;
+    border: none;
+   
+  }
+  #dropTarget18 img{
+    
+    width: 37px;
+    height: 65px !important;
+    
+  }
+
+  #dropTarget19{
+    position: absolute;
+    top: 29.1%;
+    left: 46px;
+    width: 10.5%;
+    height: 40px;
+    padding: 0px;
+    border: none;
+   
+  }
+  #dropTarget19 img{
+    
+    transform: rotate3d(0,0.9, -0.5,180deg);
+    width: 90px;
+    height: 80px !important;
+    
+  }
+
+  #dropTarget20{
+    position: absolute;
+    top: 20.1%;
+    left: 90px;
+    width: 11.5%;
+    height: 40px;
+    padding: 0px;
+    border: none;
+    
+  }
+  #dropTarget20 img{
+    
+    width: 120px;
+    height: 50px !important;
+    /* transform: rotate3d(1,0, 1,90deg); */
+
+  }
+
+  /**time crono*/
+  .button{
+  
+  background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+  border: 0;
+  border-radius: 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+.button:not([disabled]):focus {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.button:not([disabled]):hover {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+div#AppClientFullscreenButton {
+  display: none !important;
+}
+
+/****/
+

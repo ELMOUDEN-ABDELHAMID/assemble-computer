@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/cerulean/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
+    <title>Acceuil</title>
+    <style></style>
+</head>
+<body>
+<center>
+  <h1 class="mt-5" > Bienvenu cher Apprenant <i class="fa fa-face-smile"></i> </h1>
+  <div class="container">
+    <div class="row mt-5">
+        <div class="col-md-12 justify-content-center">
+            <img src="apprenant.jpg" width="390" height="380" alt="Apprenant">
+        </div>
+        <div class="col-md-12">
+            <form action="entrainement 1.html" method="post">
+                <div class="form-group">
+                    <label  class="form-label">Votre nom complet</label>
+                    <input type="text" name="name" id="name" onchange="stockname()"  class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <input type="submit" name="go" value="Commencer" class="form-control btn btn-info">
+                </div>
+            </form>
+        </div>
+        
+    </div>
+  </div>
+</center>
+<script>
+    function stockname(){
+        var inputNom= document.getElementById("name").value
+        localStorage.setItem('nom', inputNom);
+    }
+</script>
+</body>
+</html>
