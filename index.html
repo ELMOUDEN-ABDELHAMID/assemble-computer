@@ -12,9 +12,7 @@
   <link rel="image_src" type="image/png" href="https://learningapps.org/appicons/5/5450674.png?cache=1534444740&amp;large"> 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
   <script>
-    if (!localStorage.getItem('nom')) {
-        window.location.href = 'login.html'; 
-        }
+   
 </script>
   
 </head>
@@ -96,7 +94,9 @@
 
      document.getElementById("usname").innerText=localStorage.getItem('nom');
 
-
+        if (!localStorage.getItem('nom')) {
+        window.location.href = 'login.html'; 
+        }
     </script>
     
 </body>
